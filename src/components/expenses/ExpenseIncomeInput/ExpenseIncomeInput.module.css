@@ -1,0 +1,22 @@
+.ExpenseIncomeInput {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  max-width: 20%;
+}
+
+.ExpenseIncomeInput > input {
+  border-bottom: 1pt solid #ccc;
+  border: none;
+  margin: 10px;
+  text-align: center;
+  width: calc(100% - 20px);
+}
+
+.ExpenseIncomeInput > button {
+  background-color: #fff;
+  border-radius: 5px;
+  border: 2px solid var(--green-money);
+  color: var(--green-money);
+  width: 100%;
+}
