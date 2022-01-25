@@ -1,0 +1,106 @@
+.Header {
+  background-color: var(--green-money);
+  box-shadow: #0000000d 0 10px 16px 0;
+  display: flex;
+  height: 50px;
+}
+
+.HeaderLogo {
+  align-items: center;
+  color: #fff;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+  font-weight: 700;
+}
+
+.HeaderLogo > img {
+  height: 100%;
+}
+
+.HeaderNav {
+  display: flex;
+}
+
+.HeaderNavLink {
+  align-items: center;
+  border-bottom: 4px solid transparent;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  min-width: 90px;
+  text-decoration: none;
+}
+
+.HeaderNavLink:hover {
+  opacity: 0.8;
+}
+
+.HeaderNavLinkActive {
+  border-bottom: 4px solid #fff;
+}
+
+.HeaderBurger,
+.HeaderOverlay {
+  display: none;
+}
+
+/* Tablet */
+@media (min-width: 569px) and (max-width: 1200px) {
+  
+}
+
+/* Mobile */
+@media (max-width: 568px) {
+  .HeaderNav {
+    background-color: var(--green-money);
+    box-shadow: #0000000d 0 0 16px 0;
+    flex-direction: column;
+    height: 100vh;
+    left: 0;
+    position: absolute;
+    top: 49px;
+    transition: .4s;
+    width: 50%;
+    z-index: 1;
+  }
+
+  .HeaderNavLink {
+    border-bottom: none;
+    border-right: 4px solid transparent;
+    height: 60px;
+  }
+
+  .HeaderNavLinkActive {
+    border-right: 4px solid #fff;
+  }
+
+  .HeaderOverlay {
+    background-color: #000;
+    border: none;
+    bottom: 0;
+    display: block;
+    left: 0;
+    opacity: 0.5;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    width: 100%;
+  }
+
+  .HeaderBurger {
+    background-color: transparent;
+    border: none;
+    display: block;
+    padding: 0;
+  }
+
+  .HeaderBurger > img {
+    height: 30px;
+    margin-right: 15px;
+  }
+
+  .HeaderNav[data-open="false"] {
+    transform: translateX(-100%);
+  }
+}

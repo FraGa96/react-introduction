@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import ExpenseIncomeInput from './ExpenseIncomeInput';
 import ExpensesList from './ExpensesList';
+import styles from './ExpensesScreen.module.css';
 
 const ExpensesScreen = () => {
   const [expensesList, setExpensesList] = useState([]);
@@ -13,7 +14,7 @@ const ExpensesScreen = () => {
   };
 
   return (
-    <div>
+    <div className={styles.ExpensesScreen}>
       <ExpenseIncomeInput onAdd={addItem} />
       
       <ExpensesList items={expensesList} />
