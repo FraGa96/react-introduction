@@ -5,14 +5,15 @@ import styles from './AccountItem.module.css';
 const AccountItem = ({
   name = '',
   total = 0,
+  onClick = () => { },
 }) => (
-  <div className={styles.AccountItem}>
+  <button className={styles.AccountItem} type="button" onClick={onClick}>
     <span>{name}</span>
 
     <span className={total < 0 ? styles.AccountItemNegative : ''}>
       {currencyFormat(total)}
     </span>
-  </div>
+  </button>
 );
 
 export default AccountItem;

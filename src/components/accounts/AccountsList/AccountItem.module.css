@@ -1,6 +1,7 @@
 .AccountItem {
   border-radius: 5px;
   border: 1pt solid #cfcfcf8c;
+  background-color: transparent;
   box-shadow: #0000000d 0 0 12px 0;
   display: flex;
   justify-content: space-between;

@@ -8,9 +8,9 @@ const ExpensesList = ({
   const total = useMemo(() => items
     .reduce((prevValue, currentItem) => prevValue + currentItem.value, 0),
     [items]);
-  
+
   const getTotalColor = () => {
-    if(total === 0) {
+    if (total === 0) {
       return '#000';
     }
 
@@ -20,13 +20,18 @@ const ExpensesList = ({
   return (
     <div>
       <ul>
-        {items.map((item, index) => (
-          <ExpenseListItem key={index} value={item.value} />
+        {items.map((item) => (
+          <ExpenseListItem
+            key={item.id}
+            value={item.value}
+            date={item.date}
+            accountName={item.account.name}
+          />
         ))}
       </ul>
 
-      <span 
-        style={{ color: getTotalColor()}}
+      <span
+        style={{ color: getTotalColor() }}
       >
         Total: {`$${Math.abs(total)}`}
       </span>
@@ -37,7 +42,7 @@ const ExpensesList = ({
 ExpensesList.propTypes = {
   items: PropTypes.arrayOf(PropTypes.shape({
     value: PropTypes.number,
-    date: PropTypes.instanceOf(Date),
+    date: PropTypes.string,
   }))
 };
 

@@ -1,35 +1,5 @@
-.Accounts {
+.AccountsScreen {
   align-items: center;
   display: flex;
   flex-direction: column;
-}
-
-.AccountsTotal {
-  font-size: 25px;
-  font-weight: 700;
-  margin-bottom: 20px;
-}
-
-.AccountsButton {
-  background-color: transparent;
-  border-radius: 5px;
-  border: 2px solid var(--green-money);
-  color: var(--green-money);
-  margin-bottom: 15px;
-  padding: 5px;
-}
-
-.AccountsButtonCancel {
-  border: 2px solid var(--red-expense);
-  color: var(--red-expense);
-}
-
-.AccountFormContainer {
-  height: 85px;
-  transition: all 0.8s;
-}
-
-.AccountFormContainerClosed {
-  height: 0;
-  overflow: hidden;
 }

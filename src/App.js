@@ -4,6 +4,8 @@ import * as routes from './utils/routes.contants';
 import { Header } from './components/common';
 import ExpensesScreen from './components/expenses/ExpensesScreen';
 import AccountsScreen from './components/accounts/AccountsScreen';
+import Accounts from './components/accounts/Accounts';
+import AccountsMovements from './components/accounts/AccountsMovements';
 import './App.css';
 
 function App() {
@@ -13,9 +15,13 @@ function App() {
 
       <main>
         <Routes>
-          <Route path='/' element={<ExpensesScreen />} />
+          <Route index element={<ExpensesScreen />} />
 
-          <Route path={routes.ACCOUNT_ROUTE} element={<AccountsScreen />} />
+          <Route path={routes.ACCOUNT_ROUTE} element={<AccountsScreen />}>
+            <Route index element={<Accounts />} />
+
+            <Route path={':id'} element={<AccountsMovements />} />
+          </Route>
         </Routes>
       </main>
     </Router>
