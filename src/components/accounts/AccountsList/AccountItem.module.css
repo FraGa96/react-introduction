@@ -1,0 +1,14 @@
+.AccountItem {
+  border-radius: 5px;
+  border: 1pt solid #cfcfcf8c;
+  box-shadow: #0000000d 0 0 12px 0;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 5px;
+  padding: 3px;
+  width: 100%;
+}
+
+.AccountItemNegative {
+  color: var(--red-expense);
+}

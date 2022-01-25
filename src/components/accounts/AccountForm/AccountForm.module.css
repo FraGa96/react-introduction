@@ -1,0 +1,13 @@
+.AccountForm {
+  display: flex;
+  flex-direction: column;
+}
+
+.AccountForm > button {
+  background-color: transparent;
+  border-radius: 5px;
+  border: 2px solid var(--green-money);
+  color: var(--green-money);
+  margin-bottom: 15px;
+  padding: 5px;
+}

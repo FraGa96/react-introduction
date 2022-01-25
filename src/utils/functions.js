@@ -7,3 +7,9 @@ export function getOnlyDate(dateToSplit) {
     // do nothing
   }
 }
+
+export function currencyFormat(value) {
+  return value >= 0 
+  ? `$${Math.abs(Number(value)).toFixed(2)}`
+  : `-$${Math.abs(Number(value)).toFixed(2)}`;
+}
